@@ -17,6 +17,9 @@
     </head>
     <body>
         <div id="app"></div>
+
+        <script src="{{ mix('js_generated/manifest.js') }}"></script>
+        <script src="{{ mix('js_generated/vendor.js') }}"></script>
         <script src="{{ mix('js_generated/main.js') }}"></script>
     </body>
 </html>
