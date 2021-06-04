@@ -5,7 +5,7 @@
         "development": "mix",
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
+        "hot": "NODE_ENV=development mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production"
     },
@@ -13,16 +13,16 @@
         "axios": "^0.21",
         "deepmerge": "^4.2.2",
         "laravel-mix": "^6.0.19",
-        "postcss": "^8.2.14",
-        "sass": "^1.32.12",
-        "sass-loader": "^11.0.1",
-        "vue-loader": "^15.9.6",
-        "vue-template-compiler": "^2.6.12",
-        "vuetify": "^2.4.11",
+        "postcss": "^8.3.0",
+        "sass": "1.32.13",
+        "sass-loader": "^12.0.0",
+        "vue-loader": "^15.9.7",
+        "vue-template-compiler": "^2.6.13",
+        "vuetify": "^2.5.3",
         "vuetify-loader": "^1.7.2",
         "vuetifyjs-mix-extension": "0.0.20"
     },
     "dependencies": {
-        "vue": "^2.6.12"
+        "vue": "^2.6.13"
     }
 }
