@@ -2,6 +2,16 @@ const mix = require('laravel-mix')
 const path = require('path')
 require('vuetifyjs-mix-extension')
 
+if (Config.hmr) {
+  Config.hmrOptions = {
+    https: false,
+    host: 'localhost',
+    port: '8888'
+  }
+  const { https, host, port } = Config.hmrOptions
+  Config.resourceRoot = `http${https ? 's' : ''}://${host}:${port}/`
+}
+
 mix.alias({
   '@': path.join(__dirname, 'resources/js')
 })
