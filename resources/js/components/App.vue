@@ -21,6 +21,15 @@
         <Carousel class="mb-3"></Carousel>
 
         <AustralianCard></AustralianCard>
+
+        <v-divider></v-divider>
+
+        <v-btn @click="playNotificationSound">Play sound</v-btn>
+
+        <p>image JPG 1</p>
+        <v-img :src="require('@/components/images/granada.jpg')" width="100"></v-img>
+        <p>image SVG 1</p>
+        <v-img :src="require('@/components/images/Windows_Logo_1995.svg')" width="100"></v-img>
       </v-container>
     </v-main>
   </v-app>
@@ -32,12 +41,23 @@ import Carousel from '@/components/Carousel.vue'
 export default {
   components: {
     Carousel,
-    AustralianCard: () => import('@/components/AustralianCard.vue')
+    AustralianCard: () => import('@/components/AustralianCard.vue'),
   },
   data() {
     return {
       title: 'Laravel with vuetify mix extension',
       drawer: null
+    }
+  },
+  created () {
+    console.log(require('@/components/images/granada.jpg'))
+    console.log(require('@/components/audio/notification.mp3'))
+  },
+  methods: {
+    playNotificationSound() {
+      const audioFile = require('@/components/audio/notification.mp3')
+      const audio = new Audio(audioFile)
+      audio.play()
     }
   },
 }
