@@ -12,5 +12,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 
-public/js_generated
 public/mix-manifest.json
+public/js_generated
+public/img_generated
+public/media_generated
